@@ -16,11 +16,8 @@ import {
 import { motion } from "framer-motion"
 
 const navigationLinks = [
-  { href: "/", label: "Home" },
-  { href: "/hmif", label: "HMIF" },
-  { href: "/akselerasi", label: "Akselerasi" },
-  { href: "/berita", label: "Berita & Informasi" },
-  { href: "/aspiration", label: "Aspirasi" },
+  { href: "/", label: "Beranda" },
+  { href: "/tentang", label: "Tentang" },
 ]
 
 export default function Navbar() {

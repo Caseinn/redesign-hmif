@@ -15,20 +15,16 @@ export function InstagramSection() {
             {/* LEFT: Text + CTA */}
             <div className="flex w-full flex-col justify-center space-y-6 lg:w-1/2">
               <div className="flex justify-center lg:justify-start">
-                <Badge className="inline-flex items-center gap-2 rounded-full border-white/30 bg-white/10 px-3 py-1 text-xs font-medium text-white sm:px-4 sm:py-1.5 sm:text-sm">
+                <Badge className="inline-flex items-center gap-2 rounded-full border-white/30 bg-white/10 px-3 py-1 text-xs sm:px-4 sm:py-1.5 sm:text-sm  md:text-base text-white">
                   <Instagram className="h-4 w-4 sm:h-5 sm:w-5" />
                   @hmif.itera
                 </Badge>
               </div>
 
               <div className="space-y-3 text-center lg:text-left">
-                <h2 className="text-2xl font-bold leading-snug text-white sm:text-3xl md:text-4xl">
-                  Follow us on Instagram for the latest updates and fun activities!
-                </h2>
-                <p className="text-sm leading-relaxed text-white/80 sm:text-base">
-                  Stay connected with HMIF ITERA and never miss our exciting events,
-                  workshops, and community highlights.
-                </p>
+                <h1 className="text-2xl font-bold leading-snug text-white sm:text-3xl md:text-4xl">
+                  Yuk follow Instagram kami biar nggak ketinggalan info dan keseruan!
+                </h1>
               </div>
 
               <div className="flex justify-center lg:justify-start">
@@ -62,7 +58,7 @@ export function InstagramSection() {
                   </div>
 
                   {/* Embed area */}
-                  <div className="max-h-[520px] overflow-hidden rounded-2xl bg-black/60">
+                  <div className="max-h-[500px] overflow-hidden rounded-2xl bg-black/60">
                     <InstagramEmbed
                       url="https://www.instagram.com/hmif.itera"
                       width="100%"
