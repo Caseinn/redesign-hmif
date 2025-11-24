@@ -13,15 +13,13 @@ export function HeroSection() {
   return (
     <section className="bg-gradient-to-b from-[#1E4326] via-[#3A6B3B] via-66% to-[#D9F96F] text-white">
       <div className="mx-auto flex min-h-[80vh] max-w-7xl flex-col items-center gap-8 px-4 py-10 sm:px-6 sm:py-12 lg:flex-row lg:items-center lg:gap-10 lg:px-8 xl:py-16">
-        {/* LEFT: Content */}
+        {/* Content */}
         <div className="flex-1 space-y-6 text-center lg:text-left">
-          {/* Badge */}
           <Badge className="mx-auto inline-flex items-center gap-2 rounded-full bg-[#37C632] px-3 py-1 text-xs font-medium text-white shadow-md sm:px-4 sm:py-1.5 sm:text-sm md:text-base lg:mx-0">
             Welcome to HMIF ITERA
             <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4" />
           </Badge>
 
-          {/* Headings */}
           <div className="space-y-3">
             <h1 className="text-3xl font-extrabold leading-tight sm:text-4xl md:text-5xl">
               Empowering{" "}
@@ -38,7 +36,6 @@ export function HeroSection() {
             </p>
           </div>
 
-          {/* Motivation Pill */}
           <div className="flex flex-wrap items-center justify-center gap-2 text-sm sm:gap-3 sm:text-base lg:justify-start">
             <span className="font-semibold text-lime-100">
               Terjebak di zona nyaman?
@@ -49,21 +46,15 @@ export function HeroSection() {
             </span>
           </div>
 
-          {/* Quote Card */}
           <div className="mx-auto max-w-lg lg:mx-0">
             <div className="relative rounded-3xl bg-[#F5F8FC] px-8 py-6 shadow-lg">
-              {/* Left accent bar */}
               <div className="absolute left-0 top-4 bottom-4 w-[8px] rounded-full bg-[#FFD93B]" />
-
-              {/* Quote marks */}
               <div className="absolute -left-4 -top-4 flex h-9 w-9 items-center justify-center rounded-full bg-white text-xs font-semibold text-orange-400 shadow">
                 &quot;
               </div>
               <div className="absolute -right-4 -bottom-4 flex h-9 w-9 items-center justify-center rounded-full bg-white text-xs font-semibold text-orange-400 shadow">
                 &quot;
               </div>
-
-              {/* Quote content */}
               <div className="pl-6">
                 <p className="text-[15px] font-semibold italic text-[#123524] sm:text-base">
                   “Teknik Keras, Informatika Selaras”
@@ -80,7 +71,6 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Buttons */}
           <div className="flex flex-wrap justify-center gap-3 lg:justify-start">
             <Button className="w-full rounded-lg bg-[#37C632] px-6 py-2.5 text-sm font-semibold text-white shadow-md hover:bg-[#37C632]/80 sm:w-auto">
               Explore Programs
@@ -90,7 +80,6 @@ export function HeroSection() {
             </Button>
           </div>
 
-          {/* Stats */}
           <div className="mt-6 grid grid-cols-3 gap-4 sm:gap-5">
             <StatItem
               icon={<Users className="h-6 w-6" />}
@@ -110,14 +99,12 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* RIGHT: Image Collage */}
+        {/* Image collage */}
         <div className="w-full max-w-lg flex-1 lg:mt-0">
           <div className="flex justify-center">
             <div className="relative">
-              {/* glow */}
               <div className="absolute -bottom-3 left-4 right-4 h-3 rounded-full bg-[#E5FF4A]/50 blur-md sm:-bottom-4 sm:left-6 sm:right-6 sm:h-4" />
               <div className="relative rounded-[28px] bg-white/90 p-3 shadow-2xl sm:rounded-[32px] sm:p-4">
-                {/* Mobile: single image */}
                 <div className="block w-full overflow-hidden rounded-2xl lg:hidden">
                   <img
                     src={HERO_IMAGES[0]}
@@ -125,7 +112,6 @@ export function HeroSection() {
                     className="aspect-[4/3] w-full object-cover"
                   />
                 </div>
-                {/* Desktop: collage */}
                 <div className="hidden lg:flex">
                   <div className="grid h-[420px] w-[480px] grid-cols-3 gap-3">
                     <div className="col-span-2 row-span-2 overflow-hidden rounded-2xl">
@@ -157,13 +143,13 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* WAVE DIVIDER – masih di dalam section, tanpa bg tambahan */}
+      {/* Wave divider */}
       <div className="relative w-full">
         <svg
           viewBox="0 0 1200 80"
           preserveAspectRatio="none"
           className="h-12 w-full sm:h-16 md:h-20"
-          fill="#d8f999" // warna section selanjutnya
+          fill="#d8f999"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path d="M0 59L50 55C100 51 200 44 300 30C400 15 500 -6 600 1C700 8 800 44 900 59C1000 73 1100 66 1150 62L1200 59V80H1150C1100 80 1000 80 900 80C800 80 700 80 600 80C500 80 400 80 300 80C200 80 100 80 50 80H0V59Z" />
@@ -173,7 +159,6 @@ export function HeroSection() {
   )
 }
 
-// ── Reusable Stat Item ───────────────────────────────────────
 function StatItem({
   icon,
   value,

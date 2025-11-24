@@ -15,7 +15,7 @@ export function InstagramSection() {
             {/* LEFT: Text + CTA */}
             <div className="flex w-full flex-col justify-center space-y-6 lg:w-1/2">
               <div className="flex justify-center lg:justify-start">
-                <Badge className="inline-flex items-center gap-2 rounded-full border-white/30 bg-white/10 px-3 py-1 text-xs sm:px-4 sm:py-1.5 sm:text-sm  md:text-base text-white">
+                <Badge className="inline-flex items-center gap-2 rounded-full border-white/30 bg-white/10 px-3 py-1 text-xs font-medium text-white sm:px-4 sm:py-1.5 sm:text-sm md:text-base">
                   <Instagram className="h-4 w-4 sm:h-5 sm:w-5" />
                   @hmif.itera
                 </Badge>

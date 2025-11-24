@@ -83,7 +83,7 @@ export function BlogSection() {
   const others = filtered.filter((p) => p.id !== featured?.id)
 
   return (
-    <section className="bg-gradient-to-b from-emerald-100 via-lime-50 to-white py-12 sm:py-16">
+    <section className="bg-gradient-to-b from-lime-50 to-white py-12 sm:py-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Top heading */}
         <div className="space-y-4 text-center">
@@ -138,9 +138,14 @@ export function BlogSection() {
                 </div>
 
                 <div className="mt-5">
-                  <Button className="inline-flex items-center gap-2 rounded-lg bg-linear-to-r from-[#123524] to-[#4CAF50] px-5 text-sm font-medium text-emerald-50 hover:bg-emerald-800">
-                    Baca Selengkapnya
-                    <ArrowRight className="h-4 w-4" />
+                  <Button
+                    asChild
+                    className="inline-flex items-center gap-2 rounded-lg bg-linear-to-r from-[#123524] to-[#4CAF50] px-5 text-sm font-medium text-emerald-50 hover:bg-emerald-800"
+                  >
+                    <a href="/blog">
+                      Baca Selengkapnya
+                      <ArrowRight className="h-4 w-4" />
+                    </a>
                   </Button>
                 </div>
               </div>
@@ -184,12 +189,15 @@ export function BlogSection() {
 
                   <div className="mt-4">
                     <Button
+                      asChild
                       variant="outline"
                       size="sm"
                       className="inline-flex items-center gap-2 rounded-lg border-emerald-200 bg-emerald-50 text-xs font-medium text-emerald-800 hover:bg-emerald-100"
                     >
-                      Baca Selengkapnya
-                      <ArrowRight className="h-3 w-3" />
+                      <a href="/blog">
+                        Baca Selengkapnya
+                        <ArrowRight className="h-3 w-3" />
+                      </a>
                     </Button>
                   </div>
                 </CardContent>
@@ -200,8 +208,8 @@ export function BlogSection() {
 
         {/* View all button */}
         <div className="mt-8 flex justify-center">
-          <Button className="rounded-lg bg-linear-to-r from-[#123524] to-[#4CAF50] px-6 text-sm font-medium text-emerald-50 hover:bg-emerald-900">
-            Lihat Semua Artikel
+          <Button asChild className="rounded-lg bg-linear-to-r from-[#123524] to-[#4CAF50] px-6 text-sm font-medium text-emerald-50 hover:bg-emerald-900">
+            <a href="/blog">Lihat Semua Artikel</a>
           </Button>
         </div>
       </div>

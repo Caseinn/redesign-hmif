@@ -78,7 +78,7 @@ const divisions: Division[] = [
 
 export function DivisionSection() {
   return (
-    <section className="bg-gradient-to-b from-white via-lime-50 to-emerald-100 py-12 sm:py-16">
+    <section className="bg-gradient-to-b from-lime-100 to-lime-50 py-12 sm:py-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 
         <div className="space-y-4 text-center">
@@ -164,14 +164,17 @@ export function DivisionSection() {
                   </div>
                 </div>
 
-                <div className="mt-4">
+                <div className="mt-5">
                   <Button
+                    asChild
                     variant="outline"
                     size="sm"
-                    className="inline-flex items-center gap-2 rounded-lg border-emerald-200 bg-emerald-50 text-xs font-medium text-emerald-800 hover:bg-emerald-100"
+                    className="inline-flex items-center gap-2 rounded-lg border-emerald-200 bg-emerald-50 text-xs font-medium text-emerald-800 hover:bg-emerald-100 "
                   >
-                    Detail lengkap
-                    <ArrowRight className="h-3 w-3" />
+                    <a href="/divisi">
+                      Detail lengkap
+                      <ArrowRight className="h-3 w-3" />
+                    </a>
                   </Button>
                 </div>
               </CardContent>
@@ -180,9 +183,11 @@ export function DivisionSection() {
         </div>
 
         <div className="mt-8 flex justify-center">
-          <Button className="inline-flex items-center gap-2 rounded-lg bg-linear-to-r from-[#123524] to-[#4CAF50] px-6 text-sm font-medium text-emerald-50 hover:bg-emerald-900">
-            Detail Lengkap Divisi
-            <ArrowRight className="h-4 w-4" />
+          <Button asChild className="inline-flex items-center gap-2 rounded-lg bg-linear-to-r from-[#123524] to-[#4CAF50] px-6 text-sm font-medium text-emerald-50 hover:bg-emerald-900">
+            <a href="/divisi">
+              Detail Lengkap Divisi
+              <ArrowRight className="h-4 w-4" />
+            </a>
           </Button>
         </div>
       </div>
