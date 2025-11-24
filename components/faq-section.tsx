@@ -43,7 +43,7 @@ const faqItems: FaqItem[] = [
 const FaqSection = () => {
   return (
     <section className="bg-background">
-      <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         <div className="max-w-5xl space-y-3">
           <div className="flex justify-center">
             <Badge className="inline-flex items-center gap-2 rounded-full border-green-200 bg-green-50 px-3 py-1 text-xs sm:px-4 sm:py-1.5 sm:text-sm  md:text-base text-green-700">
@@ -88,8 +88,14 @@ const FaqSection = () => {
                   </span>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="px-4 pb-4 text-sm leading-relaxed text-muted-foreground sm:px-5 sm:pb-5 sm:text-base">
-                {item.answer}
+              <AccordionContent className="px-4 pb-4 sm:px-5 sm:pb-5">
+                <div className="flex gap-4 sm:gap-5">
+                  <div className="w-1 rounded-full bg-green-500" />
+
+                  <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
+                    {item.answer}
+                  </p>
+                </div>
               </AccordionContent>
             </AccordionItem>
           ))}
