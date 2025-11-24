@@ -29,7 +29,6 @@ type BlogPost = {
   featured?: boolean
 }
 
-// Placeholder Images via picsum.photos
 const placeholder = (id: number) =>
   `https://picsum.photos/seed/hmif-${id}/800/500`
 
@@ -84,11 +83,11 @@ export function BlogSection() {
   const others = filtered.filter((p) => p.id !== featured?.id)
 
   return (
-    <section className="bg-gradient-to-b from-emerald-50 via-lime-50 to-emerald-100 py-12 sm:py-16">
+    <section className="bg-gradient-to-b from-emerald-100 via-lime-50 to-white py-12 sm:py-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Top heading */}
         <div className="space-y-4 text-center">
-          <Badge className="inline-flex items-center gap-2 rounded-full border-white/30 bg-emerald-900 px-3 py-1 text-xs font-medium text-emerald-50 sm:px-4 sm:py-1.5 sm:text-sm md:text-base">
+          <Badge className="inline-flex items-center gap-2 rounded-full border-white/30 bg-linear-to-r from-[#123524] to-[#4CAF50] px-3 py-1 text-xs font-medium text-emerald-50 sm:px-4 sm:py-1.5 sm:text-sm md:text-base">
             IOS · Informatics Ongoing Story
           </Badge>
 
@@ -116,8 +115,12 @@ export function BlogSection() {
                   alt={featured.title}
                   className="h-full w-full object-cover"
                 />
-                <div className="absolute left-4 top-4">
-                  <Badge className="rounded-full bg-emerald-700/90 text-xs text-emerald-50">
+
+                {/* GRADIENT SHADOW - PURE TAILWIND */}
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/40" />
+
+                <div className="absolute left-4 top-4 z-10">
+                  <Badge className="rounded-full bg-white text-xs text-black">
                     {featured.tag}
                   </Badge>
                 </div>
@@ -135,7 +138,7 @@ export function BlogSection() {
                 </div>
 
                 <div className="mt-5">
-                  <Button className="inline-flex items-center gap-2 rounded-lg bg-emerald-700 px-5 text-sm font-medium text-emerald-50 hover:bg-emerald-800">
+                  <Button className="inline-flex items-center gap-2 rounded-lg bg-linear-to-r from-[#123524] to-[#4CAF50] px-5 text-sm font-medium text-emerald-50 hover:bg-emerald-800">
                     Baca Selengkapnya
                     <ArrowRight className="h-4 w-4" />
                   </Button>
@@ -153,15 +156,19 @@ export function BlogSection() {
                 key={post.id}
                 className="flex h-full flex-col overflow-hidden rounded-3xl border-emerald-100 bg-white/95 p-0 shadow-md gap-0"
               >
-                {/* top image fully clipped by card radius */}
+                {/* IMAGE */}
                 <div className="relative w-full aspect-[4/3] overflow-hidden">
                   <img
                     src={post.image}
                     alt={post.title}
                     className="h-full w-full object-cover"
                   />
-                  <div className="absolute left-3 top-3">
-                    <Badge className="rounded-full bg-emerald-700/90 text-[11px] text-emerald-50">
+
+                  {/* GRADIENT SHADOW */}
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/40" />
+
+                  <div className="absolute left-3 top-3 z-10">
+                    <Badge className="rounded-full bg-white text-[11px] text-black px-2">
                       {post.tag}
                     </Badge>
                   </div>
@@ -174,6 +181,7 @@ export function BlogSection() {
                   <CardDescription className="mt-2 line-clamp-4 text-xs text-emerald-900/80 sm:text-sm">
                     {post.excerpt}
                   </CardDescription>
+
                   <div className="mt-4">
                     <Button
                       variant="outline"
@@ -192,7 +200,7 @@ export function BlogSection() {
 
         {/* View all button */}
         <div className="mt-8 flex justify-center">
-          <Button className="rounded-lg bg-emerald-800 px-6 text-sm font-medium text-emerald-50 hover:bg-emerald-900">
+          <Button className="rounded-lg bg-linear-to-r from-[#123524] to-[#4CAF50] px-6 text-sm font-medium text-emerald-50 hover:bg-emerald-900">
             Lihat Semua Artikel
           </Button>
         </div>

@@ -7,12 +7,12 @@ import { Clapperboard } from "lucide-react"
 
 export function ProfileSection() {
   return (
-    <section className="relative bg-gradient-to-b from-lime-200/70 via-lime-100 to-emerald-100 py-16 sm:py-20 overflow-hidden">
+    <section className="relative bg-gradient-to-b from-lime-200 via-lime-100 to-white py-16 sm:py-20 overflow-hidden">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         
         {/* ==== Top Heading ==== */}
         <div className="space-y-4 text-center mb-10">
-          <Badge className="inline-flex items-center gap-2 rounded-full bg-emerald-900 text-white shadow px-3 py-1 text-xs font-medium sm:px-4 sm:py-1.5 sm:text-sm md:text-base">
+          <Badge className="inline-flex items-center gap-2 rounded-full bg-linear-to-r from-[#123524] to-[#4CAF50] text-white shadow px-3 py-1 text-xs font-medium sm:px-4 sm:py-1.5 sm:text-sm md:text-base">
             Video Profile
           </Badge>
 

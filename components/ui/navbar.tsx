@@ -17,6 +17,8 @@ import { motion } from "framer-motion"
 
 const navigationLinks = [
   { href: "/", label: "Beranda" },
+  { href: "/divisi", label: "Divisi" },
+  { href: "/blog", label: "Blog" },
   { href: "/tentang", label: "Tentang" },
 ]
 
